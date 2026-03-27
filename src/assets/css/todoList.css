@@ -1,5 +1,18 @@
+@import url("./var.css");
+
 .todoList {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, 1);
+    grid-template-columns: auto auto auto;
+}
+.tache {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin: 1em ;
+
+    background-color: var(--primary);
+    border: 5px solid var(--accent);
+    border-radius: 10px;
 }

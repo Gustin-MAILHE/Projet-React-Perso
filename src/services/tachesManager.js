@@ -1,9 +1,9 @@
-import {createContext, useState} from "react";
+import { createContext } from "react";
 
-function createTache(props) {
+export function createTache(props) {
 
 }
-function deleteTache(id) {
+export function supprTache(props) {
 
 }
 

@@ -1,11 +1,14 @@
 import logo from '../assets/images/logo.svg';
-
+import { BtnTheme } from '../services/theme.js'
 
 export const Header = (props) => {
     const { nbTaches, nbEnCours } = props;
     return (
         <header>
-            <img src={logo} className="App-logo" alt="logo" />
+            <div>
+                <img src={logo} className="App-logo" alt="logo" />
+                <BtnTheme/>
+            </div>
             
             <div className="detailTaches">
                 <p>Nombre total de taches : {nbTaches}</p>

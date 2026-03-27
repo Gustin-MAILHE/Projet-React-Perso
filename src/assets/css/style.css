@@ -1,21 +1,4 @@
-:root[data-theme='light'] {
-    --background: #E3FDFF;
-
-    --text: #420000;
-
-    --primary: #ffadad;
-    --secondary: #ff9191;
-    --accent: #FF3C3C;
-}
-:root[data-theme='dark'] {
-    --background: #007992;
-
-    --text: #FFEAEA;
-
-    --primary: #FF1B1B;
-    --secondary: #FF5555;
-    --accent: #ff8787;
-}
+@import url('./var.css');
 
 html, body {
     margin: 0;
