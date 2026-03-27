@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import './assets/css/style.css'
+import { Header, footer } from "./views/template";
+import { TodoList } from "./component/todo-list/view";
+import { TachesContext } from "./services/tachesManager";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header nbTaches={10} nbEnCours={3} />
+      <TodoList taches={data.taches} />
+
     </div>
   );
 }

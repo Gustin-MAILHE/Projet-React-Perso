@@ -1,0 +1,43 @@
+:root[data-theme='light'] {
+    --background: #E3FDFF;
+
+    --text: #420000;
+
+    --primary: #ffadad;
+    --secondary: #ff9191;
+    --accent: #FF3C3C;
+}
+:root[data-theme='dark'] {
+    --background: #007992;
+
+    --text: #FFEAEA;
+
+    --primary: #FF1B1B;
+    --secondary: #FF5555;
+    --accent: #ff8787;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    color: var(--text);
+    background-color: var(--background);
+}
+
+header {
+    background-color: var(--secondary);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.5em 0;
+}
+.lienPages {
+    display: flex;
+    flex-direction: row;
+}
