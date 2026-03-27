@@ -20,3 +20,7 @@ export const Header = (props) => {
         </header>
     );
 }
+
+export const Footer = (props) => {
+
+}
