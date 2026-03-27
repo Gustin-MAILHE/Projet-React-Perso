@@ -2,8 +2,9 @@
 
 .todoList {
     display: grid;
-
-    grid-template-columns: auto auto auto;
+    grid-auto-flow: column;
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(2, auto);
 }
 .tache {
     display: flex;
@@ -15,4 +16,39 @@
     background-color: var(--primary);
     border: 5px solid var(--accent);
     border-radius: 10px;
+
+    padding: 0 0.5em;
+}
+.tache .entete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.supprBtn {
+    border: none;
+    background-color: red;
+
+    border-radius: 0.5em;
+
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.terminerTache {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.terminerTache button {
+    height: 2.5em;
+
+    border: none;
+    border-radius: 0.5em;
+    background-color: lime;
+}
+
+button:hover {
+    scale: 1.2;
 }

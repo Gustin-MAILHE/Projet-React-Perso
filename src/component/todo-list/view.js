@@ -16,19 +16,30 @@ export const TodoList = () => {
 }
 
 const ViewTache = (props) => {
+    const { supprTache } = useContext( TacheContext );
     const { tache } = props;
     const id = tache.id;
     const title = tache.title;
     const desc = tache.description;
-    const dateCrea = tache.date_creation;
     const dateFin = tache.date_echeance;
-    const equipe = tache.equipiers;
+    const etat = tache.etat;
 
     return (
         <div className="tache">
-            <p>id</p>
-            <p>{title}</p>
+            <div className="entete">
+                <p>{title}</p>
+                <p>{etat}</p>
+                <button className="supprBtn" onClick={() => supprTache(id)}>X</button>
+            </div>
 
+            <div>
+                <p>Déscription</p>
+            </div>
+
+            <div className="terminerTache">
+                <p>{dateFin}</p>
+                <button>Terminer</button>
+            </div>
         </div>
     )
 }
