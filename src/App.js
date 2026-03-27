@@ -1,16 +1,18 @@
 import './App.css';
 import './assets/css/style.css'
-import { Header, footer } from "./views/template";
+import { Header, Footer } from "./views/template";
 import { TodoList } from "./component/todo-list/view";
-import { TachesContext } from "./services/tachesManager";
+import { tacheContext } from "./services/tachesManager";
 
 function App() {
   return (
-    <div className="App">
-      <Header nbTaches={10} nbEnCours={3} />
-      <TodoList taches={data.taches} />
-
-    </div>
+    <tacheContext>
+      <div className="App">
+          <Header nbTaches={10} nbEnCours={3} />
+          <TodoList/>
+          <Footer/>
+      </div>
+    </tacheContext>
   );
 }
 

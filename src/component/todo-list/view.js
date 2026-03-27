@@ -1,12 +1,14 @@
 import "../../assets/css/todoList.css"
+import {useContext} from "react";
+import {tacheContext} from "../../services/tachesManager";
 
 
-export const TodoList = (props) => {
-    const { listeTaches } = props;
+export const TodoList = () => {
+    const { taches } = useContext(tacheContext);
 
     return (
         <div content='TodoList'>
-            {listeTaches.map(item => (
+            {taches.map(item => (
                 <div key={item.id}> {item.title} </div>
             ))}
         </div>
