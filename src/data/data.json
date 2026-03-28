@@ -3,7 +3,7 @@
     {
       "id": 101,
       "title": "1. Fonctionnalités",
-      "description": "",
+      "description": "Développement des fonctionnalité",
       "date_creation": "2026-01-01",
       "date_echeance": "2026-03-01",
       "etat": "Réussi",
@@ -16,7 +16,7 @@
     {
       "id": 102,
       "title": "2. Etude de marché",
-      "description": "",
+      "description": "Recherche des valeur du marcher",
       "date_creation": "2026-01-02",
       "date_echeance": "2026-04-01",
       "etat": "Abandonné",
@@ -34,10 +34,10 @@
     {
       "id": 104,
       "title": "4. Design",
-      "description": "",
+      "description": "Création du designe du site",
       "date_creation": "2026-01-01",
       "date_echeance": "2026-03-18",
-      "etat": "Nouveau",
+      "etat": "En cours",
       "equipiers": []
     },
     {

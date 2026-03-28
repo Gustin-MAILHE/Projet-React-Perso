@@ -1,3 +1,25 @@
+:root {
+    --bgEtat: rgb(73 73 73 / 0.29);
+    --borderEtat: #252525;
+
+    --bgEtatNouveau: rgb(59 130 246 / 0.29);
+    --borderEtatNouveau: #3B82F6;
+
+    --bgEtatEnCours: rgb(139 92 246 / 0.29);
+    --borderEtatEnCours: #8B5CF6;
+
+    --bgEtatReussi: rgb(16 185 129 / 0.29);
+    --borderEtatReussi: #10B981;
+
+    --bgEtatEnAttente: rgb(245 158 11 / 0.29);
+    --borderEtatEnAttente: #F59E0B;
+
+    --bgEtatAbandonne: rgb(239 68 68 / 0.29);
+    --borderEtatAbandonne: #EF4444;
+
+
+}
+
 :root[data-theme='light'] {
     --background: #E3FDFF;
 

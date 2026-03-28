@@ -1,16 +1,20 @@
 import "../../assets/css/todoList.css"
 import { useContext } from "react";
 import { TacheContext } from "../../services/tachesManager";
+import { EtatTache, ViewFiltre } from "../filter/filtreTache";
 
 
 export const TodoList = () => {
     const { taches } = useContext( TacheContext );
 
     return (
-        <div className={"todoList"}>
-            {taches && taches.map((el) => (
-                <ViewTache tache={el}/>
-            ))}
+        <div style={{margin: '2em 5em'}}>
+            <ViewFiltre/>
+            <div className={"todoList"}>
+                    {taches && taches.map((el) => (
+                        <ViewTache tache={el}/>
+                    ))}
+            </div>
         </div>
     )
 }
@@ -20,25 +24,29 @@ const ViewTache = (props) => {
     const { tache } = props;
     const id = tache.id;
     const title = tache.title;
-    const desc = tache.description;
+    let desc = tache.description;
     const dateFin = tache.date_echeance;
     const etat = tache.etat;
+
+    if (desc === "") {
+        desc = "Aucune déscription";
+    }
 
     return (
         <div className="tache">
             <div className="entete">
-                <p>{title}</p>
-                <p>{etat}</p>
+                <p className="titre">{title}</p>
+                <EtatTache etat={etat}/>
                 <button className="supprBtn" onClick={() => supprTache(id)}>X</button>
             </div>
 
             <div>
-                <p>Déscription</p>
+                <p>{desc}</p>
             </div>
 
             <div className="terminerTache">
-                <p>{dateFin}</p>
-                <button>Terminer</button>
+                <p>Fin : {dateFin}</p>
+                <button>Modifier</button>
             </div>
         </div>
     )

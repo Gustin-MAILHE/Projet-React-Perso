@@ -2,28 +2,38 @@
 
 .todoList {
     display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 300px;
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(5, 1fr);
 }
 .tache {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
-    margin: 1em ;
+    margin: 0.5em ;
 
     background-color: var(--primary);
-    border: 5px solid var(--accent);
     border-radius: 10px;
 
-    padding: 0 0.5em;
+    padding: 0 0.7em;
 }
 .tache .entete {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.tache .entete .titre {
+    width: 8.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tache:hover .entete .titre {
+    overflow: visible;
+    white-space: normal;
+}
+.tache:hover {
+    scale: 1.05;
 }
 .supprBtn {
     border: none;
@@ -47,6 +57,38 @@
     border: none;
     border-radius: 0.5em;
     background-color: lime;
+}
+
+.etat, .tous {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bgEtat);
+    border: 3px solid var(--borderEtat);
+    height: 1.5em;
+    padding: 0 0.6em;
+    border-radius: 1.5em;
+}
+.etat.nouveau {
+    background-color: var(--bgEtatNouveau);
+    border: 3px solid var(--borderEtatNouveau);
+}
+.etat.enCours {
+    background-color: var(--bgEtatEnCours);
+    border: 3px solid var(--borderEtatEnCours);
+}
+.etat.reussi {
+    background-color: var(--bgEtatReussi);
+    border: 3px solid var(--borderEtatReussi);
+}
+.etat.enAttente {
+    background-color: var(--bgEtatEnAttente);
+    border: 3px solid var(--borderEtatEnAttente);
+}
+.etat.abandonne {
+    background-color: var(--bgEtatAbandonne);
+    border: 3px solid var(--borderEtatAbandonne);
 }
 
 button:hover {
