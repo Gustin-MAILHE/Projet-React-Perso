@@ -37,5 +37,5 @@ export const ViewFiltre = (props) => {
 }
 
 export function filtreTaches( props ) {
-
+    console.log( props )
 }
